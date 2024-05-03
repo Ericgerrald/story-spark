@@ -57,6 +57,9 @@ const Wrapper = styled.main`
     font-weight: bold;
   }
   @media screen and (min-width: 750px) {
+    .answerContainer:hover {
+      background: mediumblue;
+    }
     .choiceContainer {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -96,9 +99,6 @@ const Wrapper = styled.main`
     cursor: pointer;
   }
 
-  .answerContainer:hover {
-    background: mediumblue;
-  }
   .questionContainer {
     /* display: grid; */
     margin-bottom: 0.5rem;
