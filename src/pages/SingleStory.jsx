@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Wrapper from "../assets/wrapper/SingleStory";
-// import story from "../data";
+import story from "../data";
 import { IoPlay } from "react-icons/io5";
 import { GrGamepad } from "react-icons/gr";
 import { Link, useLoaderData } from "react-router-dom";
@@ -43,7 +43,7 @@ const SingleStory = () => {
   };
   //   const newDis = setIsTextReading(true);
   const disable = index === 0;
-  const newDisable = index === text.length - 1;
+  const newDisable = index === data.book.texts.length - 1;
 
   //   read text
 
@@ -84,9 +84,9 @@ const SingleStory = () => {
           <div className="header">
             <h2>{data.book.title}</h2>
             <button
-              disabled={index !== text.length - 1}
+              disabled={index !== data.book.texts.length - 1}
               className={
-                index !== text.length - 1
+                index !== data.book.texts.length - 1
                   ? "play playPad"
                   : "play playPad showPad"
               }
